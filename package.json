@@ -1,0 +1,27 @@
+{
+  "name": "fortifit-website",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachitj420/fortifit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rachitj420/fortifit/issues"
+  },
+  "homepage": "https://github.com/rachitj420/fortifit#readme",
+  "devDependencies": {
+    "vite": "^8.0.10"
+  }
+}

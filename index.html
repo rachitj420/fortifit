@@ -3,90 +3,499 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORTIFIT | Elite Fitness & Strength</title>
-    <meta name="description" content="Experience elite fitness and strength training at FORTIFIT. Modern equipment, expert coaching, and a community built for performance.">
-    <link rel="stylesheet" href="style.css">
+    <title>Fortifit Nutrition | Fortifying the Future</title>
+    <meta name="description" content="Fortifit Nutrition Pvt. Ltd. — pioneers in Fortified Rice Kernels. Nourishing communities, transforming lives.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div id="scroll-progress"></div>
+
+    <!-- HEADER — frosted glass strip -->
     <header id="main-header">
-        <nav class="container">
-            <div class="logo">FORTI<span>FIT</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#programs">Programs</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="btn-primary">Join Now</a></li>
+        <nav class="nav-inner">
+            <a href="#home" class="logo-link"><img src="assets/logo-transparent.png" alt="Fortifit Logo" class="nav-logo"></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-item">Home</a></li>
+                <li><a href="#about" class="nav-item">About Us</a></li>
+                <li><a href="#products" class="nav-item">Products</a></li>
+                <li><a href="#snack-teaser" class="nav-item">Coming Soon</a></li>
+                <li><a href="#contact" class="btn-primary">Contact Us</a></li>
             </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
         </nav>
     </header>
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu" style="display:none;">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#snack-teaser">Coming Soon</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
     <main>
+
         <section id="home" class="hero">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1 class="reveal">FORGE YOUR <span>STRENGTH</span></h1>
-                <p class="reveal">Push beyond your limits with world-class equipment and elite training programs tailored for high performance.</p>
-                <div class="hero-btns reveal">
-                    <a href="#programs" class="btn-primary">Explore Programs</a>
-                    <a href="#about" class="btn-secondary">Learn More</a>
+            <div class="hero-particles" id="hero-particles"></div>
+            <div class="container hero-grid-wrapper">
+                <div class="hero-visual">
+                    <img src="assets/trust-hero.png" alt="Trust — spelled in rice grains" class="hero-img">
                 </div>
-            </div>
-        </section>
-
-        <section id="programs" class="programs">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our <span>Programs</span></h2>
-                    <p>Scientifically designed training for every goal.</p>
-                </div>
-                <div class="program-grid">
-                    <div class="program-card reveal">
-                        <div class="icon">🏋️‍♂️</div>
-                        <h3>Strength Training</h3>
-                        <p>Build explosive power and functional muscle with our expert-led weightlifting sessions.</p>
+                <div class="hero-content">
+                    <div class="hero-badge slide-in-left">🌾 Manufacturer of FRK</div>
+                    <h1 class="hero-headline">
+                        <span class="line">FORTIFYING</span>
+                        <span class="line accent-text">THE FUTURE</span>
+                        <span class="line typewriter" id="typewriter"></span>
+                    </h1>
+                    <p class="hero-sub slide-in-left delay-3">Nourishing communities with the power of fortified rice. Making healthy, balanced nutrition accessible to everyone — one grain at a time.</p>
+                    <div class="hero-actions slide-in-left delay-4">
+                        <a href="#products" class="btn-primary magnetic large">Explore Products</a>
+                        <a href="#about" class="btn-outline magnetic large">Our Story</a>
                     </div>
-                    <div class="program-card reveal">
-                        <div class="icon">🏃‍♂️</div>
-                        <h3>HIIT & Cardio</h3>
-                        <p>Burn fat and improve cardiovascular endurance with high-intensity interval training.</p>
-                    </div>
-                    <div class="program-card reveal">
-                        <div class="icon">🧘‍♂️</div>
-                        <h3>Mobility & Yoga</h3>
-                        <p>Enhance recovery and flexibility to keep your body performing at its peak.</p>
+                    <div class="hero-scroll-hint">
+                        <span>Scroll to explore</span>
+                        <div class="scroll-line"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="cta" class="cta-section">
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
             <div class="container">
-                <div class="cta-content reveal">
-                    <h2>Ready to <span>Transform?</span></h2>
-                    <p>Join the elite community at FORTIFIT today and start your journey towards greatness.</p>
-                    <a href="#contact" class="btn-primary large">Get Started Today</a>
+
+                <!-- Origin Story -->
+                <div class="about-origin reveal-up">
+                    <div class="section-tag">How It Got Started</div>
+                    <h2>Food <span class="accent-text">Processing</span> at Our Core</h2>
+                    <p class="about-origin-text">For years, our group has been active in many fields — Minerals, Fabrication, Energy, Jewellery, Education and Entertainment. In 2019 we ventured into food processing with an organic soybean processing unit, exporting to USA, Canada and Europe. Building on that foundation, we established <strong>Fortifit Nutrition Pvt. Ltd.</strong> — with a clear first target: to become a leading manufacturer of Fortified Rice Kernels and help tackle malnutrition and hidden hunger across India.</p>
+                    
+                    <!-- 3 Young Entrepreneur Engineers visual -->
+                    <div class="entrepreneurs-wrap reveal-up">
+                        <div class="engineer-figure">
+                            <span class="eng-icon">👨‍🔬</span>
+                            <span class="eng-label">Rachit</span>
+                        </div>
+                        <div class="engineer-figure">
+                            <span class="eng-icon">👨‍💻</span>
+                            <span class="eng-label">Aditya</span>
+                        </div>
+                        <div class="engineer-figure">
+                            <span class="eng-icon">👨‍🔧</span>
+                            <span class="eng-label">Shobhit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FULL-WIDTH EXTRUDER BANNER -->
+                <div class="extruder-banner reveal-up">
+                    <!-- Background extruder scene (right → left) -->
+                    <div class="ex-banner-scene">
+
+                        <!-- === HOPPER (right side) === -->
+                        <div class="exb-hopper">
+                            <div class="exb-hopper-funnel"></div>
+                            <div class="exb-grain"></div>
+                            <div class="exb-grain d1"></div>
+                            <div class="exb-grain d2"></div>
+                            <div class="exb-grain d3"></div>
+                            <div class="exb-grain d4"></div>
+                            <label class="exb-label-sm">RAW INPUT</label>
+                        </div>
+
+                        <!-- Feed pipe (hopper → barrel) -->
+                        <div class="exb-feed-pipe"></div>
+
+                        <!-- === BARREL === -->
+                        <div class="exb-barrel">
+                            <div class="exb-screw">
+                                <div class="exb-thread"></div>
+                                <div class="exb-thread d1"></div>
+                                <div class="exb-thread d2"></div>
+                                <div class="exb-thread d3"></div>
+                                <div class="exb-thread d4"></div>
+                                <div class="exb-thread d5"></div>
+                            </div>
+                            <span class="exb-barrel-label">EXTRUDER</span>
+                            <!-- heating zones -->
+                            <div class="exb-heat z1"></div>
+                            <div class="exb-heat z2"></div>
+                            <div class="exb-heat z3"></div>
+                        </div>
+
+                        <!-- Die head (left of barrel) -->
+                        <div class="exb-die"></div>
+
+                        <!-- Steam puffs -->
+                        <div class="exb-steam s1"></div>
+                        <div class="exb-steam s2"></div>
+                        <div class="exb-steam s3"></div>
+
+                        <!-- === OUTPUT ARROWS (left side, 4 products) === -->
+                        <div class="exb-output-zone">
+                            <!-- Arrow 1 — FRK -->
+                            <div class="exb-arrow-row">
+                                <div class="exb-arrow-shaft">
+                                    <div class="exb-particles">
+                                        <span class="exb-p gold"></span>
+                                        <span class="exb-p gold d1"></span>
+                                        <span class="exb-p gold d2"></span>
+                                        <span class="exb-p gold d3"></span>
+                                    </div>
+                                </div>
+                                <div class="exb-arrow-head">◀</div>
+                                <div class="exb-product-tag tag-frk">🌾 FRK</div>
+                            </div>
+                            <!-- Arrow 2 — Pasta -->
+                            <div class="exb-arrow-row d1">
+                                <div class="exb-arrow-shaft">
+                                    <div class="exb-particles">
+                                        <span class="exb-p green"></span>
+                                        <span class="exb-p green d1"></span>
+                                        <span class="exb-p green d2"></span>
+                                        <span class="exb-p green d3"></span>
+                                    </div>
+                                </div>
+                                <div class="exb-arrow-head">◀</div>
+                                <div class="exb-product-tag tag-pasta">🍝 Pasta</div>
+                            </div>
+                            <!-- Arrow 3 — Fryums -->
+                            <div class="exb-arrow-row d2">
+                                <div class="exb-arrow-shaft">
+                                    <div class="exb-particles">
+                                        <span class="exb-p orange"></span>
+                                        <span class="exb-p orange d1"></span>
+                                        <span class="exb-p orange d2"></span>
+                                        <span class="exb-p orange d3"></span>
+                                    </div>
+                                </div>
+                                <div class="exb-arrow-head">◀</div>
+                                <div class="exb-product-tag tag-fryums">🍘 Fryums</div>
+                            </div>
+                            <!-- Arrow 4 — Rice Crispy Balls -->
+                            <div class="exb-arrow-row d3">
+                                <div class="exb-arrow-shaft">
+                                    <div class="exb-particles">
+                                        <span class="exb-p white"></span>
+                                        <span class="exb-p white d1"></span>
+                                        <span class="exb-p white d2"></span>
+                                        <span class="exb-p white d3"></span>
+                                    </div>
+                                </div>
+                                <div class="exb-arrow-head">◀</div>
+                                <div class="exb-product-tag tag-rice">🍙 Rice Crispy Balls</div>
+                            </div>
+                        </div>
+
+                        <!-- Conveyor belt -->
+                        <div class="exb-conveyor">
+                            <div class="exb-belt">
+                                <div class="exb-stripe"></div><div class="exb-stripe"></div>
+                                <div class="exb-stripe"></div><div class="exb-stripe"></div>
+                                <div class="exb-stripe"></div><div class="exb-stripe"></div>
+                                <div class="exb-stripe"></div>
+                            </div>
+                            <div class="exb-roller rl"></div>
+                            <div class="exb-roller rr"></div>
+                            <!-- items on belt -->
+                            <div class="exb-item gold-item"></div>
+                            <div class="exb-item green-item d1"></div>
+                            <div class="exb-item white-item d2"></div>
+                        </div>
+
+                    </div><!-- /ex-banner-scene -->
+
+                    <!-- Overlay text content -->
+                    <div class="exb-content">
+                        <div class="exb-content-inner reveal-right">
+                            <div class="section-tag">Who We Are</div>
+                            <h2>Welcome to <span class="accent-text">Fortifit</span></h2>
+                            <p>At Fortifit, we believe in nourishing communities with the power of fortified rice. Our mission is to make healthy, balanced nutrition accessible to everyone — transforming the way people eat.</p>
+                            <p>Headquartered in Durg, Chhattisgarh, our extruder technology produces a diverse range of products: <strong>FRK Rice, Fryums, Pasta, Rice Crispy Balls</strong> and more.</p>
+                            <div class="product-badges">
+                                <span class="prod-badge">🌾 FRK Rice</span>
+                                <span class="prod-badge">2D Fryums</span>
+                                <span class="prod-badge">🍝 Pasta</span>
+                                <span class="prod-badge">Rice Crispy Balls</span>
+                                <span class="prod-badge">Puff Snacks</span>
+                            </div>
+                            <div class="stats-row">
+                                <div class="stat-box">
+                                    <span class="counter" data-target="100">0</span><span class="stat-unit">%</span>
+                                    <p>Quality Assured</p>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="counter" data-target="5">0</span><span class="stat-unit">+</span>
+                                    <p>Years in Industry</p>
+                                </div>
+                            </div>
+                            <a href="#contact" class="btn-primary magnetic">Get In Touch</a>
+                        </div>
+                    </div>
+
+                </div><!-- /extruder-banner -->
+
+                <!-- Team Section -->
+                <div class="team-section">
+                    <div class="section-header reveal-up" style="margin-bottom:3rem;">
+                        <div class="section-tag">Get to Know Us</div>
+                        <h2>Our <span class="accent-text">Team</span></h2>
+                    </div>
+                    <div class="team-grid">
+                        <div class="team-card reveal-up delay-1">
+                            <div class="team-avatar">
+                                <img src="https://static.wixstatic.com/media/3d4e88_deef1795dc914ca38cc8694523d92c2a~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3d4e88_deef1795dc914ca38cc8694523d92c2a~mv2.jpg" alt="Aditya Raja Deshlahra">
+                            </div>
+                            <h3>Aditya Raja Deshlahra</h3>
+                            <span class="team-role">Founder &amp; Director</span>
+                        </div>
+                        <div class="team-card reveal-up delay-2">
+                            <div class="team-avatar">
+                                <img src="assets/rachit.png" alt="Rachit Jain">
+                            </div>
+                            <h3>Rachit Jain</h3>
+                            <span class="team-role">Founder &amp; Director</span>
+                        </div>
+                        <div class="team-card reveal-up delay-3">
+                            <div class="team-avatar">
+                                <img src="assets/Shobhit.jpeg" alt="Shobhit Deshlahra">
+                            </div>
+                            <h3>Shobhit Deshlahra</h3>
+                            <span class="team-role">CEO</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PRODUCTS -->
+        <section id="products" class="products">
+            <div class="container">
+                <!-- NEW NUTRITION INFOGRAPHIC AT START OF PRODUCTS -->
+                <div class="nutrition-grid reveal-up">
+                    <div class="nutrition-visual">
+                        <div class="frk-comparison">
+                            <div class="frk-item">
+                                <img src="assets/RAW FRK.png" alt="Real Raw FRK Rice">
+                                <span>RAW FRK RICE</span>
+                            </div>
+                            <div class="nutrient-core">
+                                <div class="nutrient-arrow n-b12"><span>Vitamin B12</span></div>
+                                <div class="nutrient-arrow n-iron"><span>Iron</span></div>
+                                <div class="nutrient-arrow n-folic"><span>Folic Acid</span></div>
+                            </div>
+                            <div class="frk-item">
+                                <img src="assets/Parboiled FRK.png" alt="Real Parboiled FRK Rice">
+                                <span>PARBOILED FRK RICE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nutrition-text">
+                        <div class="section-tag">Direct from Factory</div>
+                        <h2>100% Best FRK Straight from Our Extruder, <span class="accent-text">PAN INDIA BEST QUALITY</span></h2>
+                        <p>Our fortified rice is manufactured with precision using advanced extrusion technology. See the quality yourself — uniform, nutrient-rich, and ready for bulk supply.</p>
+                        
+                        <div class="order-cta-box reveal-up">
+                            <p class="cta-label">Ready to Order? Call us Directly:</p>
+                            <a href="tel:9131188589" class="btn-primary magnetic large order-btn">
+                                📞 +91 91311 88589
+                            </a>
+                            <p class="cta-hint">Bulk supply available across India</p>
+                        </div>
+
+                        <ul class="nutrient-list" style="margin-top: 2rem;">
+                            <li><span class="icon">🔵</span> <strong>Vitamin B12</strong> — Essential for Nerve Function</li>
+                            <li><span class="icon">🟠</span> <strong>Iron</strong> — Vital for Blood & Immunity</li>
+                            <li><span class="icon">🟢</span> <strong>Folic Acid</strong> — Growth & Development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section-header reveal-up" style="margin-top: 6rem;">
+                    <div class="section-tag">What We Do</div>
+                    <h2>Our <span class="accent-text">Specialties</span></h2>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card specialty-card tilt-card reveal-up delay-1">
+                        <div class="card-glow"></div>
+                        <div class="card-bg-icon">🔬</div>
+                        <div class="card-icon">🏅</div>
+                        <h3>BIS Certified</h3>
+                        <p>As we contain our in house lab equipment for testing every batch of FRK produced, we supply only 100% nutrition rich FRK.</p>
+                        <div class="card-tag">In-House Lab</div>
+                    </div>
+                    <div class="product-card specialty-card tilt-card reveal-up delay-2">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">🛡️</div>
+                        <h3>FSSAI FoSTaC</h3>
+                        <p>Mandatory training for food handlers and supervisors across manufacturing, catering, and retail. Hygiene is maintained at the highest standards.</p>
+                        <div class="card-tag">Certified Safety</div>
+                    </div>
+                    <div class="product-card specialty-card tilt-card reveal-up delay-3">
+                        <div class="card-glow"></div>
+                        <div class="card-bg-icon">🇮🇳</div>
+                        <div class="card-icon">🚀</div>
+                        <h3>Central FSSAI License</h3>
+                        <p>We have central FSSAI license, hence making our quality FRK reach PAN INDIA with complete regulatory compliance.</p>
+                        <div class="card-tag">Pan India Supply</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SNACK TEASER -->
+        <section id="snack-teaser" class="teaser-section">
+            <div class="teaser-bg-text">COMING SOON</div>
+            <div class="container">
+                <div class="teaser-grid">
+                    <div class="teaser-gift reveal-left">
+                        <div class="gift-box" id="snack-gift">
+                            <div class="gift-particles" id="gift-particles"></div>
+                            <div class="gift-lid">
+                                <div class="gift-bow">
+                                    <div class="bow-left"></div>
+                                    <div class="bow-right"></div>
+                                    <div class="bow-knot"></div>
+                                </div>
+                            </div>
+                            <div class="gift-body"></div>
+                            <div class="gift-ribbon-v"></div>
+                            <div class="gift-ribbon-h"></div>
+                            <div class="gift-shine"></div>
+                        </div>
+                        <p class="gift-cta-hint">Click me! 🎁</p>
+                        <div class="gift-reveal-msg" id="gift-msg">
+                            <div class="gift-msg-inner">
+                                <span class="confetti-emoji">🎉</span>
+                                <h3>Just months away!</h3>
+                                <p>From starting a healthier snack line.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teaser-content reveal-right">
+                        <span class="badge pulse">Coming Soon</span>
+                        <h2 style="color:#ffffff;">The <span style="color:#ffffff;">Fortifit Snack Line</span> is almost here.</h2>
+                        <p>Fuel your active life with our new range of nutrient-fortified snacks. Delicious, healthy, and built for performance.</p>
+                        <h3 class="tagline">"Hold your breath."</h3>
+                        <div class="newsletter-teaser">
+                            <p class="notify-label">Be the first to know.</p>
+                            <form class="teaser-form" id="teaser-form">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="btn-primary magnetic">Notify Me</button>
+                            </form>
+                            <div class="teaser-success" id="teaser-success">🎉 You're on the list!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <div class="section-tag">Let's Talk</div>
+                    <h2>Get In <span class="accent-text">Touch</span></h2>
+                    <p class="contact-intro">Reach out to <strong>Fortifit Nutrition Pvt. Ltd.</strong> — we'd love to hear from you.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info reveal-left">
+                        <div class="contact-card">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>Email Us</strong>
+                                <a href="mailto:info@fortifit.in">info@fortifit.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <strong>Call Us</strong>
+                                <a href="tel:9131188589">+91 91311 88589</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>Alternate Number</strong>
+                                <a href="tel:7000633509">+91 70006 33509</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Our Office</strong>
+                                <p>2nd Floor, Matoshree Complex,<br>Padmanabhpur, Durg,<br>Chhattisgarh</p>
+                            </div>
+                        </div>
+                        <!-- Google Maps Embed -->
+                        <div class="contact-map reveal-up">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.8!2d81.284!3d21.189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28ddec00000001%3A0x1!2sMatoshree+Complex%2C+Padmanabhpur%2C+Durg%2C+Chhattisgarh!5e0!3m2!1sen!2sin!4v1680000000000"
+                                width="100%" height="200"
+                                style="border:0; border-radius:16px;"
+                                allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Fortifit Office Location">
+                            </iframe>
+                        </div>
+                    </div>
+                    <form class="contact-form reveal-right" id="contact-form">
+                        <div class="contact-form-heading">
+                            <h3>Send Us a Message</h3>
+                            <p>We typically respond within 24 hours.</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cf-name" placeholder=" " required>
+                            <label for="cf-name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="cf-email" placeholder=" " required>
+                            <label for="cf-email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="cf-phone" placeholder=" ">
+                            <label for="cf-phone">Phone Number (optional)</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="cf-message" placeholder=" " rows="5" required></textarea>
+                            <label for="cf-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-primary full-width magnetic">Send Message ✉️</button>
+                        <div class="form-success" id="form-success">✅ Message sent! We'll get back to you soon.</div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">FORTI<span>FIT</span></div>
-            <p>&copy; 2024 FORTIFIT Elite Fitness. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+        <div class="container footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">FORTI<span>FIT</span></div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#products">Products</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">&copy; 2026 Fortifit Nutrition Pvt. Ltd. All Rights Reserved.</div>
             </div>
         </div>
     </footer>
