@@ -1,5 +1,5 @@
 // ─── INIT ─────────────────────────────────────────────
-window.addEventListener('DOMContentLoaded', () => {
+function initAll() {
     initScrollProgress();
     initStickyHeader();
     initParticles();
@@ -11,7 +11,13 @@ window.addEventListener('DOMContentLoaded', () => {
     initForms();
     initHamburger();
     initMagneticButtons();
-});
+}
+
+if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', initAll);
+} else {
+    initAll();
+}
 
 
 // ─── SCROLL PROGRESS ──────────────────────────────────
