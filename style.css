@@ -1162,10 +1162,10 @@ footer { padding: 3.5rem 0; background: var(--dark); }
     .stats-row { flex-direction: column; gap: 2rem; }
 
     /* Nutrition Infographic */
-    .frk-comparison { flex-direction: column; gap: 3rem; }
-    .nutrient-core { gap: 1rem; }
+    .frk-comparison { flex-direction: row; gap: 0.5rem; align-items: center; }
+    .nutrient-core { transform: scale(0.5); transform-origin: center; margin: 0 -25px; }
     .nutrient-arrow::before, .nutrient-arrow::after { display: none; }
-    .frk-item img { max-height: 300px; }
+    .frk-item img { max-height: 180px; border-radius: 12px; }
 
     /* Extruder Banner Responsive */
     .extruder-banner { 
@@ -1189,22 +1189,13 @@ footer { padding: 3.5rem 0; background: var(--dark); }
     .ex-banner-scene { 
         position: relative;
         inset: auto;
-        height: 380px;
-        width: 100%;
+        width: 1000px;
+        height: 280px;
         order: 2; /* Machine below text */
-        transform: scale(0.9);
-        transform-origin: center center;
+        transform: scale(calc(100vw / 1000));
+        transform-origin: top left;
+        margin-bottom: calc(-280px * (1 - (100vw / 1000)));
     }
-    
-    /* Machine layout on mobile */
-    .exb-output-zone { left: 5%; width: 90%; bottom: 120px; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .exb-arrow-row { width: 45%; }
-    .exb-barrel { left: 10%; right: 10%; bottom: 40px; }
-    .exb-die { left: calc(10% - 18px); bottom: 48px; }
-    .exb-conveyor { left: 5%; right: 5%; bottom: 0px; }
-    .exb-hopper { bottom: 140px; right: 10%; }
-    .exb-feed-pipe { bottom: 178px; right: calc(10% + 40px); }
-    .exb-steam { bottom: 104px; }
 
     /* Contact & Footer */
     .contact-form { padding: 1.5rem; }
@@ -1223,9 +1214,6 @@ footer { padding: 3.5rem 0; background: var(--dark); }
     .hero-headline { font-size: 2.8rem; }
     .section-header h2, .about-origin h2, .exb-content-inner h2 { font-size: 2.2rem; }
     .exb-arrow-row { width: 100%; }
-    .exb-output-zone { bottom: 140px; }
-    .exb-hopper { bottom: 160px; }
-    .exb-feed-pipe { bottom: 198px; }
     .team-avatar { width: 120px; height: 120px; }
 }
 #gift-msg.visible { transform: translateX(-50%) scale(1); }
