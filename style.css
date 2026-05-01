@@ -1168,28 +1168,43 @@ footer { padding: 3.5rem 0; background: var(--dark); }
     .frk-item img { max-height: 300px; }
 
     /* Extruder Banner Responsive */
-    .extruder-banner { min-height: 900px; padding-bottom: 2rem; }
-    .ex-banner-scene { transform: scale(0.7); transform-origin: bottom center; bottom: -50px; }
-    .exb-content { padding-top: 1rem; position: relative; }
+    .extruder-banner { 
+        min-height: auto; 
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .exb-content { 
+        padding-top: 1rem; 
+        position: relative; 
+        order: 1; /* Text first */
+    }
     .exb-content-inner { 
         width: 100%; 
-        background: rgba(255,255,255,0.85); 
+        background: transparent; 
         padding: 2rem 1.5rem;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 0 0 30px 30px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
-    .exb-content-inner h2 { font-size: 2.5rem; }
-    .exb-content-inner p { font-size: 1rem; }
+    .ex-banner-scene { 
+        position: relative;
+        inset: auto;
+        height: 380px;
+        width: 100%;
+        order: 2; /* Machine below text */
+        transform: scale(0.9);
+        transform-origin: center center;
+    }
     
     /* Machine layout on mobile */
-    .exb-output-zone { left: 5%; width: 90%; bottom: 180px; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .exb-output-zone { left: 5%; width: 90%; bottom: 120px; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
     .exb-arrow-row { width: 45%; }
-    .exb-barrel { left: 10%; right: 10%; bottom: 100px; }
-    .exb-die { left: calc(10% - 18px); bottom: 108px; }
-    .exb-conveyor { left: 5%; right: 5%; bottom: 60px; }
-    .exb-hopper { bottom: 200px; right: 10%; }
-    .exb-feed-pipe { bottom: 238px; right: calc(10% + 40px); }
+    .exb-barrel { left: 10%; right: 10%; bottom: 40px; }
+    .exb-die { left: calc(10% - 18px); bottom: 48px; }
+    .exb-conveyor { left: 5%; right: 5%; bottom: 0px; }
+    .exb-hopper { bottom: 140px; right: 10%; }
+    .exb-feed-pipe { bottom: 178px; right: calc(10% + 40px); }
+    .exb-steam { bottom: 104px; }
 
     /* Contact & Footer */
     .contact-form { padding: 1.5rem; }
@@ -1208,9 +1223,9 @@ footer { padding: 3.5rem 0; background: var(--dark); }
     .hero-headline { font-size: 2.8rem; }
     .section-header h2, .about-origin h2, .exb-content-inner h2 { font-size: 2.2rem; }
     .exb-arrow-row { width: 100%; }
-    .exb-output-zone { bottom: 220px; }
-    .exb-hopper { bottom: 280px; }
-    .exb-feed-pipe { bottom: 318px; }
+    .exb-output-zone { bottom: 140px; }
+    .exb-hopper { bottom: 160px; }
+    .exb-feed-pipe { bottom: 198px; }
     .team-avatar { width: 120px; height: 120px; }
 }
 #gift-msg.visible { transform: translateX(-50%) scale(1); }
