@@ -1127,33 +1127,90 @@ footer { padding: 3.5rem 0; background: var(--dark); }
 @keyframes revealLeft { to { opacity: 1; transform: none; } }
 
 /* ── RESPONSIVE ── */
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-    .hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
-    .hero-headline { font-size: 4.5rem; }
-    .hero-visual { display: none; }
-    .hero-actions, .hero-scroll-hint { justify-content: center; }
-    .about-grid, .contact-grid, .teaser-grid, .nutrition-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .product-grid { grid-template-columns: 1fr; }
+    .container { padding: 0 1.5rem; }
+
+    /* Typography */
+    .hero-headline { font-size: 3.5rem; }
+    .section-header h2, .about-origin h2, .exb-content-inner h2 { font-size: 2.8rem; }
+    .hero-sub { font-size: 0.95rem; line-height: 1.6; }
+
+    /* Header */
     .nav-links { display: none; }
     .hamburger { display: flex; }
-    .footer-top { flex-direction: column; gap: 1.5rem; }
-    .footer-bottom, .teaser-form { flex-direction: column; gap: 0.5rem; }
-    .nutrition-bowl-wrap { width: 280px; height: 280px; }
+    .nav-logo { height: 120px; }
+    #main-header { height: 70px; }
+
+    /* Hero */
+    .hero { padding-top: 140px; min-height: auto; padding-bottom: 4rem; }
+    .hero-grid-wrapper { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+    .hero-visual { order: -1; margin-bottom: 1rem; }
+    .hero-visual img { width: 80%; margin: 0 auto; display: block; }
+    .hero-actions, .hero-scroll-hint { justify-content: center; }
+    .hero-badge { margin-bottom: 1rem; }
+
+    /* Grids */
+    .about-grid, .contact-grid, .teaser-grid, .nutrition-grid, .team-grid, .product-grid { 
+        grid-template-columns: 1fr; 
+        gap: 3rem; 
+    }
+
+    /* About Section */
+    .entrepreneurs-wrap { gap: 1.5rem; }
+    .eng-icon { width: 50px; height: 50px; font-size: 1.8rem; }
+    .stats-row { flex-direction: column; gap: 2rem; }
+
+    /* Nutrition Infographic */
+    .frk-comparison { flex-direction: column; gap: 3rem; }
+    .nutrient-core { gap: 1rem; }
+    .nutrient-arrow::before, .nutrient-arrow::after { display: none; }
+    .frk-item img { max-height: 300px; }
 
     /* Extruder Banner Responsive */
-    .extruder-banner { min-height: 750px; }
-    .exb-content { padding-top: 2rem; }
+    .extruder-banner { min-height: 900px; padding-bottom: 2rem; }
+    .ex-banner-scene { transform: scale(0.7); transform-origin: bottom center; bottom: -50px; }
+    .exb-content { padding-top: 1rem; position: relative; }
     .exb-content-inner { 
         width: 100%; 
-        background: rgba(255,255,255,0.7); 
-        padding: 1.5rem;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        background: rgba(255,255,255,0.85); 
+        padding: 2rem 1.5rem;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 0 0 30px 30px;
     }
-    .exb-output-zone { width: 45%; bottom: 80px; }
-    .exb-barrel { left: 40%; bottom: 40px; }
-    .exb-die { left: calc(40% - 18px); bottom: 48px; }
-    .exb-conveyor { left: 20%; bottom: 20px; }
-    .exb-hopper { bottom: 100px; right: 20px; }
+    .exb-content-inner h2 { font-size: 2.5rem; }
+    .exb-content-inner p { font-size: 1rem; }
+    
+    /* Machine layout on mobile */
+    .exb-output-zone { left: 5%; width: 90%; bottom: 180px; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .exb-arrow-row { width: 45%; }
+    .exb-barrel { left: 10%; right: 10%; bottom: 100px; }
+    .exb-die { left: calc(10% - 18px); bottom: 108px; }
+    .exb-conveyor { left: 5%; right: 5%; bottom: 60px; }
+    .exb-hopper { bottom: 200px; right: 10%; }
+    .exb-feed-pipe { bottom: 238px; right: calc(10% + 40px); }
+
+    /* Contact & Footer */
+    .contact-form { padding: 1.5rem; }
+    .footer-top { flex-direction: column; gap: 2rem; text-align: center; }
+    .footer-links { flex-direction: column; gap: 1rem; }
+    .footer-bottom { flex-direction: column; gap: 1rem; align-items: center; }
+
+    /* Snack Teaser */
+    .teaser-bg-text { font-size: 25vw; opacity: 0.03; }
+    .teaser-form { flex-direction: column; }
+    .teaser-form button { width: 100%; }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .hero-headline { font-size: 2.8rem; }
+    .section-header h2, .about-origin h2, .exb-content-inner h2 { font-size: 2.2rem; }
+    .exb-arrow-row { width: 100%; }
+    .exb-output-zone { bottom: 220px; }
+    .exb-hopper { bottom: 280px; }
+    .exb-feed-pipe { bottom: 318px; }
+    .team-avatar { width: 120px; height: 120px; }
 }
 #gift-msg.visible { transform: translateX(-50%) scale(1); }
