@@ -1190,6 +1190,7 @@ footer { padding: 3.5rem 0; background: var(--dark); }
         position: relative;
         inset: auto;
         width: 1000px;
+        flex-shrink: 0; /* CRITICAL: prevents flex parent from squishing layout before transform */
         height: 280px;
         order: 2; /* Machine below text */
         transform: scale(calc(85vw / 1000)); /* Scaled down further to be very small */
@@ -1214,7 +1215,6 @@ footer { padding: 3.5rem 0; background: var(--dark); }
 @media (max-width: 480px) {
     .hero-headline { font-size: 2.8rem; }
     .section-header h2, .about-origin h2, .exb-content-inner h2 { font-size: 2.2rem; }
-    .exb-arrow-row { width: 100%; }
     .team-avatar { width: 120px; height: 120px; }
 }
 #gift-msg.visible { transform: translateX(-50%) scale(1); }
